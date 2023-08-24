@@ -7,15 +7,22 @@ import {
     Flex, Box, Spacer
   } from '@chakra-ui/react'
 import CartWidget from './CartWidget'
+import { Image } from '@chakra-ui/react'
+import image from './Img/petraceramicas.png'
 
 const NavBar = () => {
   return (
-    <div>
+    <div >
         <Flex>
-         <Box p='4'>
-         <h3>Ceramicas Store</h3>
+         <Box p='5'>
+         <Image 
+    boxSize='100px'
+    objectFit='cover'
+    src='../Img/petraceramicas.png'
+    alt='Petra Ceramicas'
+  />
          </Box>
-         <Spacer />
+         
          <Box p='4' >
       <Menu>
            <MenuButton>
