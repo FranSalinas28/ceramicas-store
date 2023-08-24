@@ -8,37 +8,38 @@ import {
   } from '@chakra-ui/react'
 import CartWidget from './CartWidget'
 import { Image } from '@chakra-ui/react'
-import image from './Img/petraceramicas.png'
+import logo from '../assets/petraceramicas.png'
 
 const NavBar = () => {
   return (
     <div >
         <Flex>
          <Box p='5'>
-         <Image 
-    boxSize='100px'
-    objectFit='cover'
-    src='../Img/petraceramicas.png'
-    alt='Petra Ceramicas'
-  />
+         
+         <Image
+           boxSize='100px'
+           objectFit='cover'
+           src={logo}
+           alt='Petra Ceramicas'
+         />
          </Box>
          
-         <Box p='4' >
-      <Menu>
-           <MenuButton>
-               Menu
-           </MenuButton>
+       <Box p='4' >
+          <Menu>
+            <MenuButton mt='10'>
+               Explora
+            </MenuButton>
 
-         <MenuList>
-              <MenuItem>Download</MenuItem>
-              <MenuItem>Create a Copy</MenuItem>
-             <MenuItem>Mark as Draft</MenuItem>
-       </MenuList>
-      </Menu>
-          </Box>
+          <MenuList>
+              <MenuItem>Tienda</MenuItem>
+              <MenuItem>Contacto</MenuItem>
+             <MenuItem>Petra</MenuItem>
+          </MenuList>
+        </Menu>
+      </Box>
 
          <Spacer />
-         <Box p='4' >
+         <Box p='10' >
             <CartWidget />
 
 
