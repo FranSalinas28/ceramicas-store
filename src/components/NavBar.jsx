@@ -9,39 +9,65 @@ import {
 import CartWidget from './CartWidget'
 import { Image } from '@chakra-ui/react'
 import logo from '../assets/petraceramicas.png'
+import { Link } from 'react-router-dom'
+
 
 const NavBar = () => {
   return (
     <div >
         <Flex>
          <Box p='5'>
-         
-         <Image
+
+          <Link to={"/"}> 
+           <Image
            boxSize='100px'
            objectFit='cover'
            src={logo}
            alt='Petra Ceramicas'
-         />
+           />
+           </Link>
          </Box>
          
        <Box p='4' >
           <Menu>
             <MenuButton mt='10'>
-               Explora
+               Categorías
             </MenuButton>
 
+          
           <MenuList>
-              <MenuItem>Tienda</MenuItem>
-              <MenuItem>Contacto</MenuItem>
-             <MenuItem>Petra</MenuItem>
+          
+              <MenuItem>
+              <Link to={`/categoria/${"Platos"}`}>
+              Platos
+              </Link>
+              </MenuItem>
+              
+
+
+              <MenuItem>
+              <Link to={`/categoria/${"Elementos"}`}>
+              Elementos
+              </Link>
+              </MenuItem>
+
+
+             <MenuItem>
+             <Link to={`/categoria/${"Esculturas"}`}>
+             Esculturas
+             </Link>
+             </MenuItem>
+             
           </MenuList>
+        
         </Menu>
       </Box>
 
          <Spacer />
          <Box p='10' >
+          <Link to={"/Cart"} >
             <CartWidget />
-
+            </Link>
 
          </Box>
 
