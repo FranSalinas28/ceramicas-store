@@ -1,12 +1,13 @@
 import React from 'react'
 import Item from './Item'
-import { Divider } from '@chakra-ui/react'
+import { Divider, SimpleGrid } from '@chakra-ui/react'
  
 
 const ItemList = ({ productos }) => {
 
     return (
         <div>
+            <SimpleGrid columns={3} spacing={10}>
             {
                 productos.map((p)=> {
                     return(
@@ -17,6 +18,7 @@ const ItemList = ({ productos }) => {
                     )
                 })
             }
+            </SimpleGrid>
         </div>
     )
 
