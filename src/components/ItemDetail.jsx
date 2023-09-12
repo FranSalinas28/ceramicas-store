@@ -9,6 +9,8 @@ const { id } = useParams()
 const filteredProducts = productos.filter((producto)=> producto.id == id)
 
   return (
+
+    
     <div>
       {filteredProducts.map((p)=> {
         return (
@@ -18,8 +20,8 @@ const filteredProducts = productos.filter((producto)=> producto.id == id)
             
             <Center p='1rem'>
             
+            
               <Card>
-              
                 <CardHeader>
                   <Image src={p.imageUrl}></Image>
                   <Heading size='md'>{p.nombre}</Heading>
@@ -35,13 +37,16 @@ const filteredProducts = productos.filter((producto)=> producto.id == id)
                 
                 
               </Card>
+            
 
             </Center>
           
           </div>
+        
         )
       })}
     </div>
+   
     
   )
 }
