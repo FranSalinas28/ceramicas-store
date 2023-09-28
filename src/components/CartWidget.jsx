@@ -2,9 +2,13 @@ import { MoonIcon } from '@chakra-ui/icons'
 import React from 'react'
 import { Image } from '@chakra-ui/react'
 import icono from '../assets/carro.png'
+import { useContext } from 'react'
+import { CartContext } from '../context/ShoppingCartContext'
 
 
 const CartWidget = () => {
+  const { cart, setCart, contador } = useContext(CartContext)
+  //contador
   return (
     <>
     <div>  
@@ -16,7 +20,7 @@ const CartWidget = () => {
         alt='carro'
         /> 
 
-        <p> 0 </p>
+        <p> {contador} </p>
       
         
         </div>

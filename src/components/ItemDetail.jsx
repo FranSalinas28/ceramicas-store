@@ -2,37 +2,47 @@ import React from 'react'
 import {Card, CardHeader, CardBody, CardFooter, Heading, Text, Button, Center, Image, Stack, SimpleGrid, Flex} from '@chakra-ui/react'
 import ItemCount from './ItemCount'
 import { useParams } from 'react-router-dom'
+import ShoppingCartProvider from '../context/ShoppingCartContext'
+import {useEffect, useState} from 'react'
+import {doc, getDoc, getFirestore} from 'firebase/firestore'
 
-const ItemDetail = ({ productos }) => {
-const { id } = useParams()
 
-const filteredProducts = productos.filter((producto)=> producto.id == id)
+const ItemDetail = ({ producto }) => {
+console.log(producto)
+  const {addItem} = useContext(CartContext)
+
+
+const handleOnAdd = (quantity) => {
+  setQuantityAdded(quantity)
+
+  const Item = {
+    id, nombre, precio
+  }
+  addItem(Item, quantity)
+}
+
+
 
   return (
 
-    
     <div>
-      {filteredProducts.map((p)=> {
-        return (
-        
-
-          <div key= {p.id}>
+          <div>
             
             <Center p='1rem'>
             
             
               <Card>
                 <CardHeader>
-                  <Image src={p.imageUrl}></Image>
-                  <Heading size='md'>{p.nombre}</Heading>
+                  <Image src={producto.imagen}></Image>
+                  <Heading size='md'>{producto.nombre}</Heading>
                 </CardHeader>
                 <CardBody>
-                  
-                  <Text>{p.descripcion}</Text>
-                  <Text>{p.categoria}</Text>
+                <Text>{producto.categoria}</Text>
+                  <Text>{producto.descripcion}</Text>
+                  <Text>{producto.precio}</Text>
                 </CardBody>
                 <CardFooter>
-                  <ItemCount></ItemCount>
+                  <ItemCount handleOnAdd = {handleOnAdd}></ItemCount>
                 </CardFooter>
                 
                 
@@ -43,8 +53,8 @@ const filteredProducts = productos.filter((producto)=> producto.id == id)
           
           </div>
         
-        )
-      })}
+        
+    
     </div>
    
     

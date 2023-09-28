@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup } from '@chakra-ui/react'
 
 const ItemCount = () => {
     const [contador, setContador] = useState(0)
@@ -11,7 +11,7 @@ const ItemCount = () => {
     }
     
     const onAdd =() => {
-        alert(contador)
+        alert(`cantidad agregada ${contador}`)
     }
 
 
@@ -25,9 +25,10 @@ const ItemCount = () => {
     
     <Button  m='6'onClick={() => setContador(0)}>Vaciar</Button>
 
-    <p>
-    <Button ml='12' colorScheme='blackAlpha' onClick = {onAdd}>Total</Button>
-    </p>
+    <Box>
+     
+    <Button ml='12' colorScheme='blackAlpha' onClick = {onAdd}>Agregar al carrito</Button>
+    </Box>
     
     </>
 

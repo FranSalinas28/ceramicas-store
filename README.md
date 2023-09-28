@@ -8,7 +8,7 @@ Este es un ecommerce de cerámica en donde puedes navegar a través del catálog
 ¡Esperamos que te guste nuestro trabajo!
 
 **Dejo Gif con las rutas de navegación** 
-[GIF] (https://drive.google.com/file/d/1UO5Rc3ewLiATwEpoNGShoXuB3muWsPPK/view?usp=drive_link)
+[Gif](https://drive.google.com/file/d/1UO5Rc3ewLiATwEpoNGShoXuB3muWsPPK/view?usp=drive_link)
 
 
 Fran Salinas
