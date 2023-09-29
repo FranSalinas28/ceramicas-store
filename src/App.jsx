@@ -18,7 +18,7 @@ const App = () => {
   <NavBar />
   <Routes> 
      <Route exact path='/' element= {<ItemListContainer/>} />
-     <Route exact path='/cart' element= {<Cart />} /> 
+     <Route exact path='/Cart' element= {<Cart />} /> 
      <Route exact path="/Item/:id" element= {<ItemDetailContainer/>} />
      <Route path="/categoria/:categoria" element= {<ItemListContainer/>} />
   </Routes>

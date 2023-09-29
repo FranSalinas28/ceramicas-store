@@ -11,19 +11,14 @@ const ItemListContainer = ({}) => {
   const [productos, setProductos] = useState([])
   console.log(productos)
 
-  useEffect(()=>{
-
-      const db = getFirestore()
-      const itemsCollection = collection(db, "ceramicas")
-      getDocs(itemsCollection).then((snapshot) =>{
-
-          const docs = snapshot.docs.map((doc)=> doc.data())
-          setProductos(docs)
-
-      })
-
-  },[])
-
+  useEffect(() => {
+    const db = getFirestore();
+    const itemsCollection = collection(db, "ceramicas");
+    getDocs(itemsCollection).then((snapshot) => {
+      const docs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })); // Corrección de las llaves aquí
+      setProductos(docs);
+    });
+  }, []);
 
   const filteredProducts = productos.filter((producto)=> producto.categoria === categoria)
   return (

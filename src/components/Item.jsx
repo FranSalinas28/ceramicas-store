@@ -38,11 +38,6 @@ const Item = ({ producto }) => {
         Detalle
       </Link>
       </Button>
-      
-
-      <Button variant='ghost' colorScheme='blue'>
-        Añadir carrito
-      </Button>
     </ButtonGroup>
   </CardFooter>
 </Card>
