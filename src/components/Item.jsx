@@ -9,16 +9,14 @@ const Item = ({ producto }) => {
 
   return (
 
-
-    
-    <div>
+    <>
       
    
  <Card maxW='sm'>
   <CardBody>
    
     <Image
-      src={producto.imageUrl}
+      src={producto.imagen}
       borderRadius='lg'
     />
     <Stack mt='6' spacing='3'>
@@ -51,7 +49,7 @@ const Item = ({ producto }) => {
 
 
 
-</div>
+</>
 
 
   )

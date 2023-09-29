@@ -4,33 +4,30 @@ import ItemCount from './ItemCount'
 import { useParams } from 'react-router-dom'
 import ShoppingCartProvider from '../context/ShoppingCartContext'
 import {useEffect, useState} from 'react'
-import {doc, getDoc, getFirestore} from 'firebase/firestore'
 
 
 const ItemDetail = ({ producto }) => {
-console.log(producto)
+
+
+
+/*
   const {addItem} = useContext(CartContext)
-
-
 const handleOnAdd = (quantity) => {
   setQuantityAdded(quantity)
-
   const Item = {
     id, nombre, precio
   }
   addItem(Item, quantity)
 }
 
+//function handleAddItem(quantity)   addItem(filteredProduct[0], quantity)
 
+*/
 
   return (
 
     <div>
-          <div>
-            
             <Center p='1rem'>
-            
-            
               <Card>
                 <CardHeader>
                   <Image src={producto.imagen}></Image>
@@ -42,16 +39,14 @@ const handleOnAdd = (quantity) => {
                   <Text>{producto.precio}</Text>
                 </CardBody>
                 <CardFooter>
-                  <ItemCount handleOnAdd = {handleOnAdd}></ItemCount>
+                  <ItemCount ></ItemCount>
                 </CardFooter>
                 
                 
               </Card>
-            
-
             </Center>
           
-          </div>
+      
         
         
     
