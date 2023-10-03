@@ -16,7 +16,7 @@ if(totalProd === 0) {
       <Link to={'/'}>
       <button>Productos</button>
       </Link> 
-      console.log(cart)
+      
 
 
     </div>

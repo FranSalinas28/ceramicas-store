@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from './Item'
-import { Divider, SimpleGrid } from '@chakra-ui/react'
+import { SimpleGrid } from '@chakra-ui/react'
  
 
 const ItemList = ({ productos }) => {

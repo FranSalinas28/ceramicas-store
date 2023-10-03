@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
   
     }, [])
     
-  // const filteredProducts = productos.filter((producto)=> producto.id === id)
+  
   return (
    <>
    

@@ -1,28 +1,22 @@
 import React from 'react'
 import {Card, CardHeader, CardBody, CardFooter, Heading, Text, Button, Center, Image, Stack, SimpleGrid, Flex} from '@chakra-ui/react'
 import ItemCount from './ItemCount'
-import { useParams } from 'react-router-dom'
-import ShoppingCartProvider from '../context/ShoppingCartContext'
-import {useEffect, useState} from 'react'
+import CartContext from '../context/ShoppingCartContext'
+import { useContext } from 'react'
 
 
 const ItemDetail = ({ producto }) => {
 
-
-
-/*
   const {addItem} = useContext(CartContext)
-const handleOnAdd = (quantity) => {
+const handleOnAdd = (quantity) => {
   setQuantityAdded(quantity)
-  const Item = {
-    id, nombre, precio
-  }
-  addItem(Item, quantity)
+ 
+  addItem(producto, quantity)
 }
 
-//function handleAddItem(quantity)   addItem(filteredProduct[0], quantity)
 
-*/
+
+
 
   return (
 
@@ -39,7 +33,7 @@ const handleOnAdd = (quantity) => {
                   <Text>${producto.precio}</Text>
                 </CardBody>
                 <CardFooter>
-                  <ItemCount ></ItemCount>
+                  <ItemCount handleOnAdd={handleOnAdd}/>
                 </CardFooter>
                 
                 

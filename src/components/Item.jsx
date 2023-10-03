@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Text, Button, ButtonGroup, Heading, Divider, SimpleGrid, Flex } from '@chakra-ui/react'
+import { Card, CardBody, CardFooter, Image, Stack, Text, Button, ButtonGroup, Heading, Divider } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 

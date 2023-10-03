@@ -3,7 +3,7 @@ import { useState, useEffect, useContext } from 'react'
 import { Box, Button, ButtonGroup } from '@chakra-ui/react'
 import { CartContext } from '../context/ShoppingCartContext'
 
-const ItemCount = ({id, nombre, precio}) => {
+const ItemCount = ({handleOnAdd}) => {
     const [contador, setContador] = useState(0)
 
     const restar = () => {
@@ -13,18 +13,6 @@ const ItemCount = ({id, nombre, precio}) => {
     
     
 
-    const { addItem } = useContext (CartContext)
-
-    const handleOnAdd = () => {
-        
-      const item = {
-          id, nombre, precio
-      }
-      console.log(contador)
-      addItem(item, contador)
-      alert(`cantidad agregada ${contador}`)
-
-  }
 
 
   return (
@@ -39,7 +27,7 @@ const ItemCount = ({id, nombre, precio}) => {
 
     <Box>
      
-    <Button ml='12' colorScheme='blackAlpha' onClick = {handleOnAdd}>Agregar al carrito</Button>
+    <Button ml='12' colorScheme='blackAlpha' onClick = {()=>handleOnAdd(contador)}>Agregar al carrito</Button>
     </Box>
     
     </>
