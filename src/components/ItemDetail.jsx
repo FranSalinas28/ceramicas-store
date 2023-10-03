@@ -36,7 +36,7 @@ const handleOnAdd = (quantity) => {
                 <CardBody>
                 <Text>{producto.categoria}</Text>
                   <Text>{producto.descripcion}</Text>
-                  <Text>{producto.precio}</Text>
+                  <Text>${producto.precio}</Text>
                 </CardBody>
                 <CardFooter>
                   <ItemCount ></ItemCount>
