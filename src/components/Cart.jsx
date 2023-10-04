@@ -7,7 +7,7 @@ import CartItem from './CartItem'
 
 
 const Cart = () => {
-const { cart, clearCart, totalProd, total} = useContext(CartContext)
+const {cart, clearCart, totalProd, total} = useContext(CartContext)
 
 if(totalProd === 0) {
   return(
@@ -16,7 +16,6 @@ if(totalProd === 0) {
       <Link to={'/'}>
       <button>Productos</button>
       </Link> 
-      
 
 
     </div>
@@ -24,6 +23,7 @@ if(totalProd === 0) {
 }
 
   return (
+    <>
     <div>
       
       { cart.map((productos => 
@@ -32,7 +32,7 @@ if(totalProd === 0) {
       <h3>Total: ${total}</h3>
       <h4>cantidad:{totalProd} </h4>
 
-      <button onClick={()=> clearCart()}>Vaciar carro</button>
+      <button onClick={() => clearCart()}>Vaciar carro</button>
       <Link to={Form}>Comprar</Link>
 
 
@@ -43,6 +43,7 @@ if(totalProd === 0) {
      
 
     </div>
+    </>
   )
 }
 

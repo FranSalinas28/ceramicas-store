@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
       getDoc(oneItem).then((snapshot)=> {
         if(snapshot.exists()){
           const docs = snapshot.data()
-          setProducto(docs)
+          setProducto({id, ...docs})
         }
       })
   

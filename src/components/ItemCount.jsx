@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect, useContext } from 'react'
 import { Box, Button, ButtonGroup } from '@chakra-ui/react'
-import { CartContext } from '../context/ShoppingCartContext'
+
 
 const ItemCount = ({handleOnAdd}) => {
     const [contador, setContador] = useState(0)

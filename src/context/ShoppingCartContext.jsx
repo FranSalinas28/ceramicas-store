@@ -11,7 +11,7 @@ const ShoppingCartProvider = ({children}) => {
   console.log(cart)
 
   const addItem = (item, quantity) => {
-    if(!isInCart(item.id)) {
+    if(isInCart(item.id)) {
       setCart(cart.map(producto=> {return producto.id === item.id?
       {...producto, quantity: producto.quantity + quantity} :producto} ))
     }else{

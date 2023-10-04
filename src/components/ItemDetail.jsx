@@ -1,7 +1,7 @@
 import React from 'react'
 import {Card, CardHeader, CardBody, CardFooter, Heading, Text, Button, Center, Image, Stack, SimpleGrid, Flex} from '@chakra-ui/react'
 import ItemCount from './ItemCount'
-import CartContext from '../context/ShoppingCartContext'
+import {CartContext} from '../context/ShoppingCartContext'
 import { useContext } from 'react'
 
 
@@ -9,8 +9,6 @@ const ItemDetail = ({ producto }) => {
 
   const {addItem} = useContext(CartContext)
 const handleOnAdd = (quantity) => {
-  setQuantityAdded(quantity)
- 
   addItem(producto, quantity)
 }
 
