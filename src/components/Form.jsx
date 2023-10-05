@@ -1,5 +1,6 @@
 import { getFirestore, collection, addDoc } from 'firebase/firestore'
 import { useState }from 'react'
+import { Link } from 'react-router-dom'
 //Imporotar el context
 
 const Form = () => {
@@ -35,8 +36,9 @@ const Form = () => {
     <form onSubmit={handleSubmit}>
         <input type='text' placeholder='Nombre' onChange={(e)=> setNombre(e.target.value)}/>
         <input type='text' placeholder='Email' onChange={(e)=> setEmail(e.target.value)}/>
+        <Link to={'/'}>
         <button type='submit'>Enviar</button>
-        
+        </Link>
         </form>
 
         <h3>Id de tu compra:{orderId}</h3>

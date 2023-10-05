@@ -31,10 +31,14 @@ const ShoppingCartProvider = ({children}) => {
     return cart.find(producto => producto.id === id) ? true : false
   }
 
-  const totalProd = () => cart.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0)
+  const totalProd = cart.reduce((total, item )=> total + item.quantity, 0)
+
+ const total = cart.reduce((total, item )=> total + item.precio, 0)
+
+
 
   return (
-   <CartContext.Provider value={{cart, setCart, removeItem, clearCart, addItem, totalProd}}>
+   <CartContext.Provider value={{cart, setCart, removeItem, clearCart, addItem, totalProd, total}}>
 
     {children}
   

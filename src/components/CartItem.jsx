@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { Image, Heading, Stack, Text, CardBody } from '@chakra-ui/react'
 import { CartContext } from '../context/ShoppingCartContext'
 
@@ -8,6 +8,7 @@ const {removeItem} = useContext(CartContext)
 
   return (
     <div>
+      
     <CardBody>
    
    <Image

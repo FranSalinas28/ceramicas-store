@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ItemList from './ItemList'
-import { Box, Flex, Spinner } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import { useParams } from 'react-router-dom'
 import {collection, getDocs, getFirestore} from 'firebase/firestore' 
 import Loading from './Loading'
@@ -25,7 +25,7 @@ const ItemListContainer = ({}) => {
   const filteredProducts = productos.filter((producto)=> producto.categoria === categoria)
 
   
-  productos.lenght == 0 ? <Loading/> : <ItemList/>
+  //productos.lenght === 0 ? <Loading/> : <ItemList/>
 
   return (
     <> 

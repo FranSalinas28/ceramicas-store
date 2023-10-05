@@ -6,8 +6,10 @@ import { CartContext } from '../context/ShoppingCartContext'
 
 
 const CartWidget = () => {
-  const { totalProd } = useContext(CartContext)
-  
+  //const { totalProd  } = useContext(CartContext)
+  const {cart} =useContext(CartContext)
+  const totalProd = cart.reduce((total, item )=> total + item.quantity,0)
+
   return (
     <>
     <div>  
