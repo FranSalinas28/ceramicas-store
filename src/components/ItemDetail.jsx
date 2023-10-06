@@ -1,8 +1,8 @@
 import React from 'react'
-import {Card, CardHeader, CardBody, CardFooter, Heading, Text, Button, Center, Image, Stack, SimpleGrid, Flex} from '@chakra-ui/react'
 import ItemCount from './ItemCount'
 import {CartContext} from '../context/ShoppingCartContext'
 import { useContext } from 'react'
+import { Card, CardBody, CardFooter, Image, Center, Text, CardHeader, Heading } from '@chakra-ui/react'
 
 
 const ItemDetail = ({ producto }) => {

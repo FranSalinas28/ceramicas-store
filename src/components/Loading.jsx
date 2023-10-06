@@ -4,7 +4,7 @@ import { Spinner } from '@chakra-ui/react'
 const Loading = () => {
   return (
     <div>
-        <Spinner color='red.500' />
+        <Spinner m='5' color='red.500' />
     </div>
   )
 }

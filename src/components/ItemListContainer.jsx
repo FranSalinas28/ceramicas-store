@@ -9,23 +9,27 @@ import Loading from './Loading'
 const ItemListContainer = ({}) => {
   const {categoria} = useParams()
   const [productos, setProductos] = useState([])
+  const [loading, setLoading] = useState(false)
   console.log(productos)
 
   
 
   useEffect(() => {
+    setLoading(true)
     const db = getFirestore();
     const itemsCollection = collection(db, "ceramicas");
     getDocs(itemsCollection).then((snapshot) => {
       const docs = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
       setProductos(docs);
-    });
+    })
+    .catch((error) => console.log(error))
+    .finally(()=> setLoading(false))
   }, []);
 
   const filteredProducts = productos.filter((producto)=> producto.categoria === categoria)
 
   
- productos.lenght === 0 ? <Loading/> : <ItemList/> 
+ 
 
   return (
     <> 
@@ -37,9 +41,10 @@ const ItemListContainer = ({}) => {
 
 
     
-       { 
-        categoria ? <ItemList productos = {filteredProducts} /> : <ItemList productos={productos} />
+      { 
+         loading ? <Loading/> : categoria ? <ItemList productos = {filteredProducts} /> : <ItemList productos={productos} />
         }
+        
         
 
 

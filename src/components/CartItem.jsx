@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Image, Heading, Stack, Text, CardBody } from '@chakra-ui/react'
+import { Image, Heading, Stack, Text, CardBody, Button } from '@chakra-ui/react'
 import { CartContext } from '../context/ShoppingCartContext'
 
 const CartItem = ({nombre, imagen, id, quantity, precio}) => {
@@ -21,7 +21,7 @@ const {removeItem} = useContext(CartContext)
         <p>Cantidad: {quantity} </p>
         <p>Valor: {precio}</p>
      </Text>
-     <button onClick={() => removeItem(id)}>Eliminar</button>
+     <Button onClick={() => removeItem(id)}>Eliminar</Button>
      <Text color='blue.600' fontSize='2xl'></Text>
    </Stack>
   
