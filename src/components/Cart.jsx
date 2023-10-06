@@ -29,7 +29,7 @@ const Cart = () => {
 
   return (
     <>
-      <div>
+      
       <SimpleGrid columns={3} spacing={10}>
 
         {cart.map((productos =>
@@ -56,7 +56,7 @@ const Cart = () => {
         
 
 
-      </div>
+      
     </>
   )
 }

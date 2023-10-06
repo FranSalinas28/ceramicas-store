@@ -6,9 +6,9 @@ import { SimpleGrid } from '@chakra-ui/react'
 const ItemList = ({ productos }) => {
 
     return (
-        <div>
+        
 
-            <SimpleGrid columns={3} spacing={10}>
+            <SimpleGrid columns={3} spacing={10} >
             {
                 productos.map((p)=> {
                     return(
@@ -20,7 +20,7 @@ const ItemList = ({ productos }) => {
                 })
             }
             </SimpleGrid>
-        </div>
+       
     )
 
 }
