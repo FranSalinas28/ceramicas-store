@@ -22,13 +22,13 @@ const handleOnAdd = (quantity) => {
             <Center p='1rem'>
               <Card>
                 <CardHeader>
-                  <Image src={producto.imagen}></Image>
-                  <Heading size='md'>{producto.nombre}</Heading>
+                  <Image boxSize='450px' src={producto.imagen}></Image>
+                  <Heading size='md' mt='4'>{producto.nombre}</Heading>
                 </CardHeader>
                 <CardBody>
-                <Text>{producto.categoria}</Text>
+                <Text fontSize='lg' color='grey'>{producto.categoria}</Text>
                   <Text>{producto.descripcion}</Text>
-                  <Text>${producto.precio}</Text>
+                  <Text mt='2'>Valor: ${producto.precio}</Text>
                 </CardBody>
                 <CardFooter>
                   <ItemCount handleOnAdd={handleOnAdd}/>

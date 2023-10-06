@@ -13,11 +13,12 @@ const {removeItem} = useContext(CartContext)
    
    <Image
      src={imagen}
+     boxSize='300px'
      borderRadius='lg'/>
    <Stack mt='6' spacing='3'>
      <Heading size='md'>{nombre}</Heading>
      <Text>
-        <p>Cantidad: {quantity}</p>
+        <p>Cantidad: {quantity} </p>
         <p>Valor: {precio}</p>
      </Text>
      <button onClick={() => removeItem(id)}>Eliminar</button>

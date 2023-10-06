@@ -25,7 +25,7 @@ const ItemListContainer = ({}) => {
   const filteredProducts = productos.filter((producto)=> producto.categoria === categoria)
 
   
-  //productos.lenght === 0 ? <Loading/> : <ItemList/>
+ productos.lenght === 0 ? <Loading/> : <ItemList/> 
 
   return (
     <> 

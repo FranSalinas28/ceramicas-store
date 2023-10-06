@@ -24,13 +24,14 @@ const NavBar = () => {
            objectFit='cover'
            src={logo}
            alt='Petra Ceramicas'
+           ml='2'
            />
            </Link>
          </Box>
          
        <Box p='4' >
           <Menu>
-            <MenuButton mt='10'>
+            <MenuButton mt='12' >
                Categorías
             </MenuButton>
 

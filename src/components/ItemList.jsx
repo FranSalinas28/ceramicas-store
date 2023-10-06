@@ -7,6 +7,7 @@ const ItemList = ({ productos }) => {
 
     return (
         <div>
+
             <SimpleGrid columns={3} spacing={10}>
             {
                 productos.map((p)=> {

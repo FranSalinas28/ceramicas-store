@@ -1,7 +1,15 @@
 import { getFirestore, collection, addDoc } from 'firebase/firestore'
 import { useState }from 'react'
 import { Link } from 'react-router-dom'
-//Imporotar el context
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+} from '@chakra-ui/react'
+
+
+
 
 const Form = () => {
 
@@ -22,17 +30,17 @@ const Form = () => {
     }
 
     const order = {
-      //buyer: {
+      
       nombre, email
-    } //,
-    // items: cart.map(({id, nombre, precio}) => { id,nombre precio})
+    } 
 
     const ordersCollection = collection(db, "orden")
-  //}
+  
 
 
   return (
     <>
+    
     <form onSubmit={handleSubmit}>
         <input type='text' placeholder='Nombre' onChange={(e)=> setNombre(e.target.value)}/>
         <input type='text' placeholder='Email' onChange={(e)=> setEmail(e.target.value)}/>
@@ -42,6 +50,7 @@ const Form = () => {
         </form>
 
         <h3>Id de tu compra:{orderId}</h3>
+      
         </>
   )
 }

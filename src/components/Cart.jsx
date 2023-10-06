@@ -1,11 +1,10 @@
 import React from 'react'
-import Form from './Form'
 import { useContext } from 'react'
 import { CartContext } from '../context/ShoppingCartContext'
 import { Card } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import CartItem from './CartItem'
-import { Button } from '@chakra-ui/react'
+import { Button, SimpleGrid, Text } from '@chakra-ui/react'
 
 
 const Cart = () => {
@@ -31,6 +30,7 @@ const Cart = () => {
   return (
     <>
       <div>
+      <SimpleGrid columns={3} spacing={10}>
 
         {cart.map((productos =>
           <>
@@ -40,15 +40,20 @@ const Cart = () => {
           </>
 
         ))}
-        <h3>Total: ${total}</h3>
-        <h4>cantidad:{totalProd} </h4>
+        </SimpleGrid>
+        <br/>
+        <Text fontSize='xl' color='grey' ml='5' >Total: ${total}</Text>
+        <Text fontSize='xl' color='grey' ml='5'>cantidad: {totalProd} </Text>
+        <br/>
 
-        <Button onClick={() => clearCart()}>Vaciar carro</Button>
+
+        <Button color='purple' m='5' onClick={() => clearCart()}>Vaciar carro</Button>
 
         
         <Link to={'/Form'}>
-          <Button>Comprar</Button>
+          <Button color='purple'>Comprar</Button>
         </Link>
+        
 
 
       </div>
